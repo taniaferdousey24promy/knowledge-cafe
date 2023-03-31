@@ -54,7 +54,7 @@ const Blogs = () => {
         
     //   ]
     return (
-        <div>
+        <div className='mt-5'>
             {/* <h1>All Blogs</h1> */}
             
             {
