@@ -31,6 +31,16 @@ const Qna = () => {
                 </ul>
             </p>
         </div>
+
+        <div className='text-start mt-5'>
+            <h4>(iii) How does React Work?</h4>
+            <p className='ms-4'>
+
+            React is  one of the most popular javascript libraries to build user interfaces for mobile and web application developers. It was developed by Facebook. It is used to build user interface and web applications quickly and efficiently in the easiest way possible. Developers create UI components using JSX. JSX looks like HTML on the outer side. We can receive data as props and manage inside their states using hooks .
+
+ 
+            </p>
+        </div>
         
 
         </div>
