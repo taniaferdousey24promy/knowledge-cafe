@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Blog from '../Blog/Blog';
 import BookmarkSection from '../BookmarkSection/BookmarkSection';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Blogs = () => {
     const [bookmarked,setBookmarked] = useState([]);
@@ -22,6 +24,10 @@ const Blogs = () => {
 
       const newBookmarked = [...bookmarked,blog];
       setBookmarked(newBookmarked);
+
+      if (newBookmarked.id==bookmarked.id){
+        toast('Already in bookmarks')
+      }
     }
 
     return (
@@ -50,8 +56,12 @@ const Blogs = () => {
 
             <div className='bg-secondary-subtle border mt-5 rounded p-2'>
               <h2>Bookmarked Blogs</h2>
-              {/* <p>blogs: {blogs.length}</p> */}
+              
               <p>Selected bookmarks : {bookmarked.length}</p>
+              <ToastContainer />
+
+
+
 
 
 

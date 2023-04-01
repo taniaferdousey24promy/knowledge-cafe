@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './Components/Header/Header'
 import Blogs from './Components/Blogs/Blogs'
+import Qna from './Components/Qna/Qna'
 
 
 function App() {
@@ -19,8 +20,12 @@ function App() {
 
 
         {/* div for blogs . blogs= blogs+bookmark*/}
-        <div className='ol'>
+        <div >
           <Blogs></Blogs>
+        </div>
+
+        <div>
+          <Qna></Qna>
         </div>
 
     </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Blog.css'
 import BookmarkSection from '../BookmarkSection/BookmarkSection';
+import { ToastContainer } from 'react-toastify';
 
 const Blog = (props) => {
     const {id,coverPicture,authorName, authorProfile,blogTitle,hashtag,publishedDate,spentTime}=props.blog;
@@ -33,6 +34,7 @@ const Blog = (props) => {
 
                     {
                         <p className='pt-3 spacing-for-bookmark '>{spentTime}min read  <i onClick={() => handleToAddInBookmarked(props.blog)} className ="ms-2 fa-sharp fa-regular fa-bookmark pt-4" ></i></p>
+                  
 
                     }
 
