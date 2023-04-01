@@ -1,16 +1,17 @@
-.style-blog-div{
-    background-color: aqua;
-    /* border: 2px solid black; */
-}
-
 
 
 .style-blog-div{
     width: 500px;
-    height: 700px;
+    height: 600px;
     overflow: hidden;
+    background-color: white;
 
 }
+.style-blog-div button {
+    text-decoration: underline;
+}
+
+
 
 .cover-img img{
     max-width: 100%;

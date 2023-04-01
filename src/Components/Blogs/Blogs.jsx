@@ -3,6 +3,7 @@ import Blog from '../Blog/Blog';
 import BookmarkSection from '../BookmarkSection/BookmarkSection';
 
 const Blogs = () => {
+    const [bookmarked,setBookmarked] = useState([]);
     const [blogs,setBlogs] = useState([]);
     const [time,setTime] = useState(0)
     useEffect(()=>{
@@ -16,16 +17,24 @@ const Blogs = () => {
 
       setTime(newTime)
     }
+    const handleToAddInBookmarked = (blog) =>{
+      // console.log(bookmarked);
+
+      const newBookmarked = [...bookmarked,blog];
+      setBookmarked(newBookmarked);
+    }
+
     return (
         <div className='mt-5 d-flex '>
 
           <div>
           {
-                  blogs.map(blog => <Blog
-                    key={blog.id}
-                    blog = {blog}
-                    handleTimeToContainer={handleTimeToContainer}
-                    ></Blog> )
+                    blogs.map(blog => <Blog
+                      key={blog.id}
+                      blog = {blog}
+                      handleTimeToContainer={handleTimeToContainer}
+                      handleToAddInBookmarked={handleToAddInBookmarked}
+                      ></Blog> )
 
                
             }
@@ -41,7 +50,16 @@ const Blogs = () => {
 
             <div className='bg-secondary-subtle border mt-5 rounded p-2'>
               <h2>Bookmarked Blogs</h2>
-              <p>blogs: {blogs.length}</p>
+              {/* <p>blogs: {blogs.length}</p> */}
+              <p>Selected bookmarks : {bookmarked.length}</p>
+
+
+
+
+
+
+              
+              
             </div>
 
           </div>

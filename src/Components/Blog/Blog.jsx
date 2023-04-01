@@ -5,6 +5,7 @@ import BookmarkSection from '../BookmarkSection/BookmarkSection';
 const Blog = (props) => {
     const {id,coverPicture,authorName, authorProfile,blogTitle,hashtag,publishedDate,spentTime}=props.blog;
     const handleTimeToContainer = props.handleTimeToContainer;
+    const handleToAddInBookmarked = props.handleToAddInBookmarked;
 
 
 
@@ -13,7 +14,7 @@ const Blog = (props) => {
 
 
 
-            <div className='style-blog-div text-start'>
+            <div className='style-blog-div text-start mt-3 border-bottom'>
                 <div className='cover-img '>
                     <img src={coverPicture}></img>
 
@@ -31,7 +32,7 @@ const Blog = (props) => {
                     <div>
 
                     {
-                        <p className='pt-3 spacing-for-bookmark '>{spentTime}min read<i className ="ms-2 fa-sharp fa-regular fa-bookmark pt-4"></i></p>
+                        <p className='pt-3 spacing-for-bookmark '>{spentTime}min read  <i onClick={() => handleToAddInBookmarked(props.blog)} className ="ms-2 fa-sharp fa-regular fa-bookmark pt-4" ></i></p>
 
                     }
 
@@ -44,27 +45,8 @@ const Blog = (props) => {
 
                 <h3>{blogTitle}</h3>
                 <p>{hashtag}</p>
-                <button onClick={() => handleTimeToContainer(spentTime)}>Mark As Read</button>
-            </div>
-
-
-
-
-
-
-                
-                
-            
-
-            
-
-            
-
-            
-
-
-
-        
+                <button onClick={() => handleTimeToContainer(spentTime)}className=''>Mark As Read</button>
+            </div>        
     );
 
     
